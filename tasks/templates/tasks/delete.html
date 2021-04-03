@@ -1,0 +1,9 @@
+<h3>Deseja mesmo deletar"{{item}}?</h3>
+
+<a href = "{% url 'list'%}">Cancelar</a>]
+
+<form method="POST" action= "">
+    {% csrf_token %}
+    {{form}}
+    <input type = "submit" value = "Confirmar">
+</form>

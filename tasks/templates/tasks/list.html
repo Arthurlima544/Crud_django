@@ -1,0 +1,14 @@
+<h3>Ola seleção</h3>
+
+<form method="POST" action= "/">
+    {% csrf_token %}
+    {{form.title}}
+    <input type = "submit" value = "Cadastrar">
+</form>
+{% for task in tasks %}
+<div>
+    <a href = "{% url 'update_task' task.id %}">Atualizar Dados</a>
+    <a href = "{% url 'delete' task.id %}">Deletar</a>
+    <p>{{task}}</p>
+</div>
+{% endfor %}
